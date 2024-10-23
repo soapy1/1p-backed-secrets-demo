@@ -46,3 +46,13 @@ $ pulumi plugin install resource onepassword --server github://api.github.com/1P
 ```
 $ pulumi up
 ```
+
+### Try it out with GHA
+
+[`.github/workflows/push-1password-secrets-to-gha`](https://github.com/soapy1/1p-backed-secrets-demo/blob/main/.github/workflows/push-1password-secrets-to-gha.yaml)
+
+This workflow shows how you can use pulumi to pull secrets from 1password and push them to a github repo. In this demo, we are just pushing to this repo. However, you should be able to extend this to push to any repo you have access to (access is determined by the GH token provided to the CI).
+
+Try it out by:
+* create and push a branch names with following the pattern "demo-push-secrets-*"
+* observe the run in github action that populates a secret in this repo
