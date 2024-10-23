@@ -27,6 +27,10 @@ This outlines how you can connect a GH action to 1Password to read things like t
 
 This outlines how to use Pulumi to read from 1Password and push them to other CI services like GHA.
 
+Try either:
+* Python flavour in ./1p-write-secrets-demo-python
+* YAML flavour ./1p-write-secrets-demo-yaml
+
 ### Running locally
 
 * Install the 1password cli
