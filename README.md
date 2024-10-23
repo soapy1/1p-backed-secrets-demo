@@ -27,6 +27,10 @@ This outlines how you can connect a GH action to 1Password to read things like t
 
 This outlines how to use Pulumi to read from 1Password and push them to other CI services like GHA.
 
+Try either:
+* Python flavour in ./1p-write-secrets-demo-python
+* YAML flavour ./1p-write-secrets-demo-yaml
+
 ### Running locally
 
 * Install the 1password cli
@@ -42,3 +46,13 @@ $ pulumi plugin install resource onepassword --server github://api.github.com/1P
 ```
 $ pulumi up
 ```
+
+### Try it out with GHA
+
+[`.github/workflows/push-1password-secrets-to-gha`](https://github.com/soapy1/1p-backed-secrets-demo/blob/main/.github/workflows/push-1password-secrets-to-gha.yaml)
+
+This workflow shows how you can use pulumi to pull secrets from 1password and push them to a github repo. In this demo, we are just pushing to this repo. However, you should be able to extend this to push to any repo you have access to (access is determined by the GH token provided to the CI).
+
+Try it out by:
+* create and push a branch names with following the pattern "demo-push-secrets-*"
+* observe the run in github action that populates a secret in this repo
