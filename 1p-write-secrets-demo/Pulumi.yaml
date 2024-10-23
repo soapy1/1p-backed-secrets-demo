@@ -1,0 +1,10 @@
+name: 1p-write-secrets-demo
+description: Read from 1Password and push them to other CI services, like GHA
+runtime:
+  name: python
+  options:
+    toolchain: pip
+    virtualenv: venv
+config:
+    github:owner:
+        value: soapy1

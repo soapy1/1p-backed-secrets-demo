@@ -1,0 +1,40 @@
+# python
+__pycache__
+dist
+build
+*.egg-info
+.pytest_cache
+
+# yarn / nuxt
+node_modules
+.nuxt
+
+# nix
+.direnv
+**/.DS_Store
+
+# vscode
+.history/
+.vscode/
+*.code-workspace
+
+# playwright
+screenshots
+test-results
+
+# ruff
+.ruff_cache
+
+# MacOS
+**/.DS_Store
+
+/node_modules
+/build
+
+
+# Node/bun
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+*.lockb
