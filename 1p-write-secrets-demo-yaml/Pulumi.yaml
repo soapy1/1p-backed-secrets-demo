@@ -1,7 +1,8 @@
 name: 1p-write-secrets-demo-yaml
 description: A minimal Pulumi YAML program
 runtime: yaml
-config: {'pulumi:tags': {value: {'pulumi:template': yaml}}}
+config:
+  'pulumi:tags': {value: {'pulumi:template': yaml}}
 variables:
   test-secret:
     fn::invoke:
@@ -10,6 +11,11 @@ variables:
         title: demo-api-cred
         vault: pulumi
 resources:
+  onepassword-provider:
+    type: pulumi:providers:onepassword
+    options:
+      version: 1.1.4
+      pluginDownloadURL: github://api.github.com/1Password/
   gha-test-secret:
     type: github:ActionsSecret
     properties:
