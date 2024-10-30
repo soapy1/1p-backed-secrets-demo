@@ -56,3 +56,9 @@ This workflow shows how you can use pulumi to pull secrets from 1password and pu
 Try it out by:
 * create and push a branch names with following the pattern "demo-push-secrets-*"
 * observe the run in github action that populates a secret in this repo
+
+#### Some notes about setting this up
+
+* in order for pulumi to work in GHA, the action needs a way access the pulumi back end. This can be done (either) by:
+  * adding a `PULUMI_ACCESS_TOKEN` as a secret to GH
+  * setting up OIDC (eg. https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/)
