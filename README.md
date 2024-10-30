@@ -62,3 +62,8 @@ Try it out by:
 * in order for pulumi to work in GHA, the action needs a way access the pulumi back end. This can be done (either) by:
   * adding a `PULUMI_ACCESS_TOKEN` as a secret to GH
   * setting up OIDC (eg. https://www.pulumi.com/docs/pulumi-cloud/access-management/oidc/client/github/)
+
+* in order for pulumi to write secrets to GH, it must auth with GH. This can be done (either by):
+  * adding a `GITHUB_TOKEN` as a secret to GH
+  * pulling the github token from 1password
+  * configuring the pulumi github app
