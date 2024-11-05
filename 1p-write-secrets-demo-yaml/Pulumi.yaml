@@ -20,9 +20,9 @@ resources:
     type: github:ActionsSecret
     options:
       retainOnDelete: true
-      deleteBeforeReplace: true
+      deleteBeforeReplace: false
     properties:
       repository: 1p-backed-secrets-demo
       secretName: demo_api_cred
-      plaintextValue: ${test-secret.credential}
+      plaintextValue: "test-different-secret"
 outputs: {}
