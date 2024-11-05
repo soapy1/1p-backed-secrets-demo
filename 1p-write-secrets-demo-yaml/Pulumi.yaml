@@ -18,6 +18,10 @@ resources:
       pluginDownloadURL: github://api.github.com/1Password/
   gha-test-secret:
     type: github:ActionsSecret
+    options:
+      protect: true
+      retainOnDelete: true
+      deleteBeforeReplace: true
     properties:
       repository: 1p-backed-secrets-demo
       secretName: demo_api_cred
