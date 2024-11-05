@@ -19,11 +19,11 @@ resources:
   gha-test-secret:
     type: github:ActionsSecret
     options:
-      protect: true
+      protect: false
       retainOnDelete: true
       deleteBeforeReplace: true
     properties:
       repository: 1p-backed-secrets-demo
       secretName: demo_api_cred
-      plaintextValue: ${test-secret.credential}
+      plaintextValue: test-update-value
 outputs: {}
