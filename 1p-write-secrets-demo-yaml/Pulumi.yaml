@@ -18,8 +18,11 @@ resources:
       pluginDownloadURL: github://api.github.com/1Password/
   gha-test-secret:
     type: github:ActionsSecret
+    options:
+      retainOnDelete: true
+      deleteBeforeReplace: false
     properties:
       repository: 1p-backed-secrets-demo
       secretName: demo_api_cred
-      plaintextValue: ${test-secret.credential}
+      plaintextValue: "test-different-secret"
 outputs: {}
